@@ -4,9 +4,9 @@ function getComputerChoice() {
 }
 
 function getPlayerChoice() {
-  let choice = prompt("Choose rock, paper, or scissors");
+  let choice = prompt("Choose rock, paper, or scissors").toLowerCase();
     while (choice !== "rock" && choice !== "paper" && choice !== "scissors") {
-      choice = prompt("Choose rock, paper, or scissors");
+      choice = prompt("Choose rock, paper, or scissors").toLowerCase();
       if (choice === "rock" || choice === "paper" || choice === "scissors") {
         break;
       }
@@ -14,7 +14,7 @@ function getPlayerChoice() {
         continue;
       }
     }
-  return choice.toLowerCase();
+  return choice;
 }
 
 function playRound(playerSelection, computerSelection) {
